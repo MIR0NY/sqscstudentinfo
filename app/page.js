@@ -120,17 +120,17 @@ function App() {
 
           {/* Class Select */}
           <Select onValueChange={handleClassChange} value={selectedClass}>
-            <SelectTrigger className="w-[33%] max-w-[180px] ">
+            <SelectTrigger className="w-[40%] max-w-[200px] ">
               {/* If value is 'all', show placeholder, otherwise show the selected value */}
-              <SelectValue placeholder="Select Class">
-                {selectedClass === "all" ? "Select Class" : selectedClass}
+              <SelectValue placeholder="Class">
+                {selectedClass === "all" ? "Class" : selectedClass}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectLabel>Class</SelectLabel>
                 {/* Changed value from "" to "all" */}
-                <SelectItem value="all">All Classes</SelectItem>
+                <SelectItem value="all">All</SelectItem>
                 <SelectItem value="SIX">SIX</SelectItem>
                 <SelectItem value="SEVEN">SEVEN</SelectItem>
                 <SelectItem value="EIGHT">EIGHT</SelectItem>
@@ -147,17 +147,17 @@ function App() {
             // Disable if no class selected (or "all" class selected) or no sections defined for the class
             disabled={selectedClass === "all" || !class_section[selectedClass] || class_section[selectedClass].length === 0}
           >
-            <SelectTrigger className="w-[33%] max-w-[180px] ">
+            <SelectTrigger className="w-[50%] max-w-[200px] ">
               {/* If value is 'all', show placeholder, otherwise show the selected value */}
-              <SelectValue placeholder="Select Section">
-                 {selectedSection === "all" ? "Select Section" : selectedSection}
+              <SelectValue placeholder="Section">
+                 {selectedSection === "all" ? "Section" : selectedSection}
               </SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectLabel>Section</SelectLabel>
                 {/* Changed value from "" to "all" */}
-                <SelectItem value="all">All Sections</SelectItem>
+                <SelectItem value="all">All</SelectItem>
                 {/* Only render sections if a specific class is selected (not "all") */}
                 {selectedClass !== "all" && class_section[selectedClass] && class_section[selectedClass].map((section) => (
                   <SelectItem key={section} value={section}>
@@ -168,7 +168,7 @@ function App() {
             </SelectContent>
           </Select>
 
-          <Button onClick={resetFilters}>Clear Filters</Button>
+          <Button onClick={resetFilters}>Clear</Button>
         </div>
       </div>
       <div className="mt-1">
