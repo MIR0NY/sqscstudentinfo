@@ -5,6 +5,7 @@ import StudentCard from "../components/StudentCard";
 import { Button } from "@/components/ui/button";
 import { useRef, useState, useEffect, useCallback } from "react";
 
+
 import {
   Select,
   SelectContent,
@@ -40,7 +41,7 @@ function App() {
 
   const { data: allStudentsData, isPending, isError, error } = useQuery({
     queryFn: async () => {
-      let a = await fetch("https://script.google.com/macros/s/AKfycbzhT0C9HiKPHSMOaVxW_-IQzgFrH8ONYNmoGy9XY6rIeCC3vjJ35EHradbV0k_PaeWRlA/exec?sheet=Students") // Corrected URL based on likely typo if it previously worked
+      let a = await fetch(process.env.NEXT_PUBLIC_GOOGLESHEETURI)
       let data = await a.json()
       return data
     },
@@ -113,12 +114,12 @@ function App() {
 
   return (
     <div className='min-w-full'>
-      <div className="flex items-center justify-center sticky top-[27px] z-10">
-        <div className="flex w-[98%] rounded-sm py-1 gap-2 justify-center mt-3 bg-gray-200 dark:bg-accent">
+      <div className="flex items-center justify-center sticky top-[26px] z-10">
+        <div className="flex w-[98%] rounded-sm py-1 gap-2 justify-center mt-3 bg-white dark:bg-accent">
 
           {/* Class Select */}
           <Select onValueChange={handleClassChange} value={selectedClass}>
-            <SelectTrigger className="w-[33%] max-w-[180px] bg-white text-black border border-black">
+            <SelectTrigger className="w-[33%] max-w-[180px] ">
               {/* If value is 'all', show placeholder, otherwise show the selected value */}
               <SelectValue placeholder="Select Class">
                 {selectedClass === "all" ? "Select Class" : selectedClass}
@@ -145,7 +146,7 @@ function App() {
             // Disable if no class selected (or "all" class selected) or no sections defined for the class
             disabled={selectedClass === "all" || !class_section[selectedClass] || class_section[selectedClass].length === 0}
           >
-            <SelectTrigger className="w-[33%] max-w-[180px] bg-white text-black border border-black">
+            <SelectTrigger className="w-[33%] max-w-[180px] ">
               {/* If value is 'all', show placeholder, otherwise show the selected value */}
               <SelectValue placeholder="Select Section">
                  {selectedSection === "all" ? "Select Section" : selectedSection}
