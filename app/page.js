@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useRef, useState, useEffect, useCallback } from "react";
 
 
+
 import {
   Select,
   SelectContent,
@@ -41,7 +42,7 @@ function App() {
 
   const { data: allStudentsData, isPending, isError, error } = useQuery({
     queryFn: async () => {
-      let a = await fetch(process.env.GOOGLESHEETURI)
+      let a = await fetch(process.env.NEXT_PUBLIC_GOOGLESHEETURI)
       let data = await a.json()
       return data
     },
