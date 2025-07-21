@@ -43,7 +43,6 @@ function App() {
   const { data: allStudentsData, isPending, isError, error } = useQuery({
     queryFn: async () => {
       let a = await fetch(process.env.NEXT_PUBLIC_GOOGLESHEETURI)
-      console.log(`fetching:  ${process.env.NEXT_PUBLIC_GOOGLESHEETURI}`)
       let data = await a.json()
       return data
     },
@@ -117,7 +116,7 @@ function App() {
   return (
     <div className='min-w-full'>
       <div className="flex items-center justify-center sticky top-[26px] z-10">
-        <div className="flex w-[98%] rounded-sm py-1 gap-2 justify-center mt-3 bg-white dark:bg-accent">
+        <div className="flex px-2 rounded-sm py-1 gap-2 justify-center mt-3 bg-white dark:bg-accent">
 
           {/* Class Select */}
           <Select onValueChange={handleClassChange} value={selectedClass}>
