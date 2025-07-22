@@ -44,7 +44,7 @@ const StudentCard = ({ data }) => {
                 <div>{data.StudentName}</div>
               </div>
             </div>
-            <a className="text-blue-600 underline" onClick={handlePhoneClick}>Phone</a>
+            <Button variant="outline" className="cursor-pointer" onClick={handlePhoneClick}>Phone</Button>
           </div>
         </CardTitle>
         <CardDescription>
