@@ -33,7 +33,7 @@ export default function Home() {
 
 function App() {
   const class_section = {
-    "SIX": ["GOLAP", "SHAPLA", "BELI", "SHEULY", "TAGAR", "BAKUL"],
+    "SIX": ["GOLAP", "SHAPLA", "BELI", "SHEULY", "TAGAR", "BAKUL", "RAJANIGANDHA"],
     "SEVEN": ["DOYEL", "KOYEL", "MOYNA", "TIYA", "EAGLE", "KOKIL"],
     "EIGHT": ["SHITOLOKKHA", "MEGHNA", "PADMA", "JAMUNA"],
     "NINE": ["LAL", "SABUJ"],
