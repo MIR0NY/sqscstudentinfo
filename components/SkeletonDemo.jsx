@@ -14,10 +14,10 @@ const SkeletonDemo = () => {
       <div className="w-full space-y-7 px-2 py-3">
         <div className="h-52 flex border justify-between bg-card rounded-2xl p-6 ">
           <div className="space-y-3">
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[350px] h-3" />
-            <Skeleton className="w-[350px] h-3" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[250px] h-3" />
+            <Skeleton className="w-[250px] h-3" />
             <div className="mt-5">
               <Skeleton className="w-[90px] h-9" />
             </div>
@@ -28,10 +28,10 @@ const SkeletonDemo = () => {
         </div>
         <div className="h-52 flex border justify-between bg-card rounded-2xl p-6 ">
           <div className="space-y-3">
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[350px] h-3" />
-            <Skeleton className="w-[350px] h-3" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[250px] h-3" />
+            <Skeleton className="w-[250px] h-3" />
             <div className="mt-5">
               <Skeleton className="w-[90px] h-9" />
             </div>
@@ -42,10 +42,10 @@ const SkeletonDemo = () => {
         </div>
         <div className="h-52 flex border justify-between bg-card rounded-2xl p-6 ">
           <div className="space-y-3">
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[350px] h-3" />
-            <Skeleton className="w-[350px] h-3" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[250px] h-3" />
+            <Skeleton className="w-[250px] h-3" />
             <div className="mt-5">
               <Skeleton className="w-[90px] h-9" />
             </div>
@@ -56,10 +56,10 @@ const SkeletonDemo = () => {
         </div>
         <div className="h-52 flex border justify-between bg-card rounded-2xl p-6 ">
           <div className="space-y-3">
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[350px] h-3" />
-            <Skeleton className="w-[350px] h-3" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[250px] h-3" />
+            <Skeleton className="w-[250px] h-3" />
             <div className="mt-5">
               <Skeleton className="w-[90px] h-9" />
             </div>
@@ -70,10 +70,10 @@ const SkeletonDemo = () => {
         </div>
         <div className="h-52 flex border justify-between bg-card rounded-2xl p-6 ">
           <div className="space-y-3">
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[300px] h-5" />
-            <Skeleton className="w-[350px] h-3" />
-            <Skeleton className="w-[350px] h-3" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[200px] h-5" />
+            <Skeleton className="w-[250px] h-3" />
+            <Skeleton className="w-[250px] h-3" />
             <div className="mt-5">
               <Skeleton className="w-[90px] h-9" />
             </div>
@@ -82,6 +82,7 @@ const SkeletonDemo = () => {
             <Skeleton className="w-10 h-10" />
           </div>
         </div>
+
       </div>
     </div>
   );
