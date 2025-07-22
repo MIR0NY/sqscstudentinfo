@@ -1,3 +1,5 @@
+import { Check, X, Phone } from "lucide-react";
+
 import {
   Card,
   CardAction,
@@ -44,7 +46,7 @@ const StudentCard = ({ data }) => {
   };
 
   return (
-    <Card className="m-2" variant="outline">
+    <Card className="m-2">
       <CardHeader>
         <CardTitle className="flex flex-col gap-3">
           <div className="flex justify-between">
@@ -68,7 +70,7 @@ const StudentCard = ({ data }) => {
               className="cursor-pointer"
               onClick={handlePhoneClick}
             >
-              Phone
+              <Phone/>
             </Button>
           </div>
         </CardTitle>
@@ -108,7 +110,7 @@ const StudentCard = ({ data }) => {
               <div>
                 {data.StudentName} <br />
                 {data.Status != "Transferred" ? (
-                  <div className="flex gap-3 mt-3 justify-center">
+                  <div className="flex gap-3 mt-3 justify-center text-sm">
                     <div>{data.StudentID}</div>
                     <div>{data.Class}</div>
                     <div>{data.Section}</div>
@@ -134,9 +136,7 @@ const StudentCard = ({ data }) => {
                     <div>Blood Group: {data.BloodGroup}</div>
                   </CardDescription>
                 </CardHeader>
-              </Card>
 
-              <Card className="p-1">
                 <CardHeader className="p-1 gap-0">
                   <CardTitle className="bg-accent rounded-sm p-2">
                     Tuition Payments Summary
@@ -166,10 +166,8 @@ const StudentCard = ({ data }) => {
                     )}
                   </CardDescription>
                 </CardHeader>
-              </Card>
 
-              {data.VehicleNo && (
-                <Card className="p-1">
+                {data.VehicleNo && (
                   <CardHeader className="p-1 gap-0">
                     <CardTitle className="bg-accent rounded-sm p-2">
                       Vehicle Payments Summary
@@ -196,31 +194,32 @@ const StudentCard = ({ data }) => {
                       </div>
                     </CardDescription>
                   </CardHeader>
-                </Card>
-              )}
+                )}
+              </Card>
 
               <div className="flex">
                 <div className="w-[50%] flex flex-col items-center ">
-                  <div className="font-semibold">
-                    Half Yearly Exam Fee
-                  </div>
+                  <div className="font-semibold">Half Yearly Exam Fee</div>
                   <div>
-                    {data.HalfYearlyExamFee ? "✅" : "❎"}
+                    {data.HalfYearlyExamFee ? (
+                      <span className="text-3xl"><Check/></span>
+                    ) : (
+                      <span className="text-3xl"><X/></span>
+                    )}
                   </div>
-                  
                 </div>
-                  <div className="w-[50%] flex flex-col items-center ">
-                <div className="font-semibold">
-
-                   Yearly Exam Fee
-                  </div>
+                <div className="w-[50%] flex flex-col items-center ">
+                  <div className="font-semibold">Yearly Exam Fee</div>
                   <div>
-                    {data.YearlyExamFee ? "✅" : "❎"}
+                    {data.YearlyExamFee ? (
+                      <span className="text-3xl"><Check/></span>
+                    ) : (
+                      <span className="text-3xl"><X/></span>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
-
           </DialogDescription>
         </DialogContent>
       </Dialog>

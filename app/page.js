@@ -5,6 +5,8 @@ import StudentCard from "../components/StudentCard";
 import { Button } from "@/components/ui/button";
 import { useRef, useState, useEffect, useCallback } from "react";
 
+import SkeletonDemo from "@/components/SkeletonDemo";
+
 
 
 import {
@@ -18,6 +20,7 @@ import {
 } from "@/components/ui/select"
 
 import "./globals.css"
+import Skeleton from "@/components/SkeletonDemo";
 
 const queryClient = new QueryClient()
 
@@ -106,7 +109,7 @@ function App() {
 
   // Loading and Error states for react-query
   if (isPending) {
-    return <span>Loading student data...</span>;
+    return <SkeletonDemo/>
   }
 
   if (isError) {
