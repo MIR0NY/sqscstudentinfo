@@ -104,7 +104,7 @@ const StudentCard = ({ data }) => {
       <Dialog open={moreDetails} onOpenChange={setMoreDetails}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle className="flex justify-center">
+            <DialogTitle className="flex justify-center text-center">
               <div>
                 {data.StudentName} <br />
                 {data.Status != "Transferred" ? (
@@ -125,7 +125,7 @@ const StudentCard = ({ data }) => {
               <Card className="p-1">
                 <CardHeader className="p-1 gap-0">
                   <CardTitle className="bg-accent rounded-sm p-2">
-                    <div>Personal Information</div>
+                    Personal Information
                   </CardTitle>
 
                   <CardDescription className="p-2">
